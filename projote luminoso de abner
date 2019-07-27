@@ -1,0 +1,95 @@
+//Programa : Sensor de presenca
+//pin Dim igual a lampada que vai acender, controlada pelo arduino que em determinado horario vai acendendo ou vai apagando
+ 
+int pinorele = 2; //Pino ligado ao rele
+int pinopir = 7; //Pino ligado ao sensor PIR
+int acionamento; //Variavel para guardar valor do sensor
+
+#define PINO_ZC 2
+#define PINO_DIM 9
+
+volatile long luminosidade = 0;  // 0 a 100 
+ 
+void zeroCross()  {
+//variação da intensiadade da luz
+  if (luminosidade>100) luminosidade=100;
+  if (luminosidade<0) luminosidade=0;
+  long t1 = 8200L * (100L - luminosidade) / 100L;      
+  delayMicroseconds(t1);   
+  digitalWrite(PINO_DIM, HIGH);  
+  delayMicroseconds(6);      // t2
+  digitalWrite(PINO_DIM, LOW);   
+}
+RTCDateTime dataehora;   //Criação do objeto do tipo RTCDateTime
+//tempo para o arduino
+ 
+void setup()
+//acendimento de lampada com movimento
+{
+pinMode(pinorele, OUTPUT); //Define pino rele como saida
+pinMode(pinopir, INPUT); //Define pino sensor como entrada
+Serial.begin(9600);
+}
+//aumento da luz
+pinMode(PINO_DIM, OUTPUT);
+  attachInterrupt(0, zeroCross, RISING);
+}
+//diminuição da luz
+pinMode(PINO_DIM, OUTPUT);
+  attachInterrupt(1, zeroCross, RISING);
+}
+
+{
+//tempo para o arduino
+  Serial.begin(9600);     //Inicialização da comunicação serial
+  rtc.begin();            //Inicialização do RTC DS3231
+ 
+  rtc.setDateTime(__DATE__, __TIME__);   //Configurando valores iniciais 
+                                         //do RTC DS3231
+}
+ 
+void loop()
+//acendimento da lampada com movimento
+{
+acionamento = digitalRead(pinopir); //Le o valor do sensor PIR
+ 
+if (acionamento == LOW) //Sem movimento, mantem rele desligado
+{
+digitalWrite(pinorele, LOW);
+Serial.println("Parado");
+}
+else //Caso seja detectado um movimento, aciona o rele
+{
+digitalWrite(pinorele, HIGH);
+Serial.println("Movimento !!!");
+}
+}
+{
+  dataehora = rtc.getDateTime();     //Atribuindo valores instantâneos de 
+                                     //data e hora à instância dataehora
+
+ Serial.print(dataehora.hour);     //Imprimindo a Hora
+  Serial.print(":");
+ Serial.print(dataehora.minute);   //Imprimindo o Minuto
+  Serial.print(":");
+  delay(1000);     //Tempo p atualização do valor enviado pela porta
+                   //serial
+}
+//modo de ir aumentando a luz do quarto..ex.
+{
+if (Serial.print(dataehora.minute))=18.0
+ for (byte i=20; i<95; i++) {
+    luminosidade=i;
+    delay(150);     
+  }
+  delay(1000)
+}
+// modo de ir escurecendo a luz do quarto.. ex.
+{
+if (Serial.print(dataehora.minute))=4.0
+for (byte i=20; i<95; i--) {
+    luminosidade=i;
+    delay(150);     
+  }
+  delay(1000)
+  }
