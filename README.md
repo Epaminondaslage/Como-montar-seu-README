@@ -126,8 +126,35 @@ Embora o Markdown seja a linguagem padrão para a criação de arquivos README n
 
   **Manutenibilidade**: Lembre-se de que o README é um documento que pode precisar de atualizações frequentes. Utilizar HTML pode aumentar a complexidade das edições, especialmente se você estiver utilizando CSS embutido ou layouts complexos.
 
+## 11. Exemplo de Uso Misto (Markdown e HTML)
 
-## 10. Considerações Finais
+# Título do Projeto
+
+Bem-vindo ao **Projeto do Aluno X**! Este projeto foi desenvolvido para...
+
+<img src="imagem/projeto.png" alt="Imagem do Projeto" style="width:50%; display:block; margin:auto;">
+
+## Funcionalidades
+
+1. **Funcionalidade A**: Descrição da funcionalidade A.
+2. **Funcionalidade B**: Descrição da funcionalidade B.
+
+<table>
+  <tr>
+    <th>Recurso</th>
+    <th>Descrição</th>
+  </tr>
+  <tr>
+    <td>Recurso 1</td>
+    <td>Este recurso faz XYZ</td>
+  </tr>
+  <tr>
+    <td>Recurso 2</td>
+    <td>Este recurso faz ABC</td>
+  </tr>
+</table>
+
+## 12. Considerações Finais
 
 Seu README deve ser suficientemente detalhado para que desenvolvedores possam iniciar e contribuir com o projeto, sem se tornar excessivamente longo ou complexo. Documentação mais extensa pode ser melhor alocada em wikis ou documentos separados, enquanto o README deve permanecer focado e direto ao ponto.
 
