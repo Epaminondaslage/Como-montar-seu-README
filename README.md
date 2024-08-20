@@ -1,4 +1,4 @@
-### Guia Básico para Estruturação de um README 
+# Guia Básico para Estruturação de um README 
 
 Em um projeto de software, o arquivo **README** é mais do que apenas um documento; ele é uma porta de entrada essencial, tanto para desenvolvedores que estão conhecendo o projeto pela primeira vez quanto para colaboradores e usuários. Mesmo em um cenário onde a documentação ágil se torna cada vez mais comum, o **README** continua a ser uma peça fundamental, proporcionando uma visão geral do projeto e orientações claras para aqueles que desejam contribuir.
 
