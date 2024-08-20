@@ -43,6 +43,8 @@ Aqui estão alguns dos principais recursos do Markdown:
 
 Markdown é popular devido à sua simplicidade e facilidade de conversão para outros formatos, como HTML, o que o torna uma escolha comum para arquivos README, documentação de software, blogs e outros textos online.
 
+# O que deve conter seu **README.MD**:
+
 ## 1. Título do Projeto
 
 O título deve incluir o nome do projeto, acompanhado, se aplicável, pela versão atual e pela plataforma de hardware utilizada. Essa é a primeira informação que os usuários visualizarão e deve ser clara e indicativa do propósito do projeto.
