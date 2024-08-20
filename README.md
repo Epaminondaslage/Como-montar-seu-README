@@ -132,7 +132,7 @@ Embora o Markdown seja a linguagem padrão para a criação de arquivos README n
 
 Bem-vindo ao **Projeto do Aluno X**! Este projeto foi desenvolvido para...
 
-<img src="imagem/projeto.png" alt="Imagem do Projeto" style="width:50%; display:block; margin:auto;">
+<img src="/projeto.jpg" alt="Imagem do Projeto" style="width:30%; display:block; margin:auto;">
 
 ## Funcionalidades
 
