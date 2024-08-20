@@ -17,7 +17,7 @@ Versão 1.0 - Plataforma: Arduino Uno
 
 A descrição deve ser sucinta, porém completa, oferecendo uma visão geral do que o projeto faz e sua importância. Inclua detalhes sobre a funcionalidade principal, o público-alvo, e o problema que o projeto resolve. Evite ambiguidade e mantenha o foco nos aspectos mais relevantes.
 
-'''## Descrição
+```## Descrição
 Este projeto implementa um sistema de controle de LEDs utilizando o microcontrolador Arduino Uno. Ele permite acender, apagar e alterar o brilho dos LEDs via comandos seriais, sendo ideal para projetos educacionais e de automação básica.
 ```
 
@@ -25,7 +25,7 @@ Este projeto implementa um sistema de controle de LEDs utilizando o microcontrol
 
 Em projetos mais complexos ou com READMEs extensos, um índice é essencial para facilitar a navegação. Ele deve listar as seções principais e fornecer links que permitam acesso rápido a cada uma delas.
 
-'''## Sumário
+```## Sumário
 1. [Título do Projeto](#título-do-projeto)
 2. [Descrição](#descrição)
 3. [Sumário](#sumário-índice)
